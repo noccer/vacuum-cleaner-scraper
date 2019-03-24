@@ -1,7 +1,7 @@
 {
   "name": "bugaboo-price-scraper",
   "version": "1.0.0",
-  "description": "a simple nodeJS file to scrape some Australian websites for the latest prices on the Bugaboo Cameleon 3 stroller/pram",
+  "description": "A simple NodeJS file to scrape some Australian websites for the latest prices on the Bugaboo Cameleon 3 stroller/pram.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
