@@ -1,10 +1,11 @@
 {
-  "name": "bugaboo",
+  "name": "bugaboo-price-scraper",
   "version": "1.0.0",
-  "description": "",
+  "description": "a simple nodeJS file to scrape some Australian websites for the latest prices on the Bugaboo Cameleon 3 stroller/pram",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape": "node ./index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2"
-  }
+  },
+  "bundleDependencies": [
+    "axios",
+    "cheerio"
+  ]
 }
