@@ -1,4 +1,4 @@
-git ## Bugaboo Scraper
+## Bugaboo Scraper
 
 A simple scraper that queries a couple of Australian websites to check prices of the Bugaboo Cameleon 3 stroller/pram
 
