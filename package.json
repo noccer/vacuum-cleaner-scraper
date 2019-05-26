@@ -1,21 +1,36 @@
 {
-  "name": "bugaboo-price-scraper",
+  "name": "vacuum-cleaner-scraper",
   "version": "1.0.0",
-  "description": "A simple NodeJS file to scrape some Australian websites for the latest prices on the Bugaboo Cameleon 3 stroller/pram.",
+  "description": "A simple NodeJS file to scrape some Australian websites for the latest prices on the Miele CX1 vacuum cleaner.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scrape": "node ./index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "cheerio": "^1.0.0-rc.2"
-  },
+  "keywords": [
+    "Cheerio",
+    "Axios",
+    "Javascript",
+    "scrape",
+    "scraping"
+  ],
+  "author": "Niall O'Callaghan",
+  "license": "WTFPL",
   "bundleDependencies": [
     "axios",
     "cheerio"
-  ]
+  ],
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noccer/vacuum-cleaner-scraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noccer/vacuum-cleaner-scraper/issues"
+  },
+  "homepage": "https://github.com/noccer/vacuum-cleaner-scraper#readme",
+  "dependencies": {}
 }

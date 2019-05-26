@@ -1,13 +1,13 @@
-## Bugaboo Scraper
+## Miele CX1 Price Scraper
 
-A simple scraper that queries a couple of Australian websites to check prices of the Bugaboo Cameleon 3 stroller/pram
+I do like a good bargain. This is a simple scraper that queries a couple of Australian websites to check prices of the Miele CX1 vacuum cleaner.
 
 ### Usage
 
 ```
-git clone git@github.com:noccer/bugaboo-scraper.git
+git clone git@github.com:noccer/vacuum-cleaner-scraper.git
 npm install
-npm run scrape >> console logs prices from David Jones and Baby Bunting sites.
+npm run scrape >> console logs prices from Myer, Harvey Norman, JBHiFi and The Good Guys.
 ```
 
 ### Improvments
