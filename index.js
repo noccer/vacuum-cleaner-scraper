@@ -1,6 +1,9 @@
-const SES = require('aws-sdk').SES;
+// const AWS = require('aws-sdk');
+// const SES = new AWS.SES({
+//     apiVersion: "2010-12-01"
+// });
 
-exports.handler = async (event, context, callback) => {
+// exports.handler = async (event, context, callback) => {
 
     const cheerio = require('cheerio')
     const axios = require('axios').default
@@ -95,7 +98,7 @@ exports.handler = async (event, context, callback) => {
     //     }, (error) => console.log(error));
 
 
-    const scrapers = await Promise.all([
+    const scrapers = Promise.all([
         JBHiFi,
         HarveyNorman,
         Myer,
@@ -116,32 +119,54 @@ exports.handler = async (event, context, callback) => {
         console.log(reason)
     });
 
-    // return scrapers
+    // const Charset = 'UTF-8';
+    // const emailParams = {
+    //     Destination: {
+    //         ToAddresses: ["noccer@gmail.com"]
+    //     },
+    //     ConfigurationSetName: 'MieleCX1SNSDestination',
+    //     Message: {
+    //         Body: {
+    //             Html: {
+    //                 Charset,
+    //                 Data: `<pre>${scrapers}</pre>`
+    //             },
+    //             Text: {
+    //                 Charset,
+    //                 Data: `${JSON.stringify(scrapers, undefined, 2)}`,
+    //             }
+    //         },
+    //         Subject: {
+    //             Charset,
+    //             Data: `Price check for Miele CX1 ${new Date().toDateString()}`
+    //         }
+    //     },
+    //     ReplyToAddresses: [],
+    //     ReturnPath: "",
+    //     ReturnPathArn: "",
+    //     Source: "noccer@gmail.com",
+    //     SourceArn: ""
 
-    let Source = event.source;
-    let ToAddresses = event.toAddresses;
-    if (typeof ToAddresses === 'string') {
-        ToAddresses = [ToAddresses];
-      }
+    // }
+    // SES.sendEmail(emailParams, (error, data) => {
+    //     if (error) {
+    //         console.log(error, error.stack);
+    //     } else {
+    //         console.log(`Email submitted to SES`, data);
+    //     }
+    // })
 
-    const Charset = 'UTF-8';
-    // needs ses:SendEmail permission
-    new SES().sendEmail({
-        Destination: {ToAddresses},
-        Message: {
-            Body: {
-                Html: {
-                    Charset,
-                    Data: `<pre>${scrapers}</pre>`
-                }
-            },
-            Subject: {
-                Charset,
-                Data: `Price check for Miele CX1 ${new Date().toDateString()}`
-            }
-        },
-        Source,
+    return scrapers;
 
-    }, callback)
-
-}
+    // SNS:
+    // var eventText = JSON.stringify(scrapers, null, 2);
+    // console.log("Received event:", eventText);
+    // var sns = new AWS.SNS();
+    // var params = {
+    //     // Source:
+    //     Message: eventText,
+    //     Subject: "Test SNS From Lambda",
+    //     TopicArn: "arn:aws:sns:us-east-1:662754294282:NotifyMe"
+    // };
+    // sns.publish(params, context.done);
+// }
