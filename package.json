@@ -34,6 +34,6 @@
   },
   "homepage": "https://github.com/noccer/vacuum-cleaner-scraper#readme",
   "dependencies": {
-    "aws-sdk": "^2.463.0"
+    "aws-sdk": "^2.814.0"
   }
 }
